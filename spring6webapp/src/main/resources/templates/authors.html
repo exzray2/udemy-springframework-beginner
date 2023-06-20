@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <title>Author List</title>
+</head>
+<body>
+<div class="container mx-auto bg">
+    <table class="w-full">
+        <tr>
+            <th>ID</th>
+            <th class="text-center">Firstname</th>
+            <th class="text-center">Lastname</th>
+            <th class="text-center">Number of Book</th>
+        </tr>
+        <tr th:each="author : ${authors}">
+            <td class="text-center" th:text="${author.id}"></td>
+            <td th:text="${author.getFirstname()}"></td>
+            <td th:text="${author.getLastname()}"></td>
+            <td class="text-center" th:text="${author.getBooks().size()}"></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
