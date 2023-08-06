@@ -29,6 +29,7 @@
         <module>spring-6-security</module>
         <module>spring-6-reactive</module>
         <module>spring-6-r2dbc</module>
+        <module>spring-6-reactive-mongo</module>
     </modules>
 
     <dependencies>
